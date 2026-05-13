@@ -1,11 +1,11 @@
 const CATEGORY_BUDGETS = {
     "Ăn uống": 3600000,
     "Mèo": 500000,
-    "Xăng xe": 200000,
+    "Xăng xe": 300000,
     "Thiết yếu": 300000,
-    "Cố định": 4000000,
-    "Ăn ngoài": 1000000,
-    "Khác": 2000000
+    "Cố định": 5500000,
+    "Ăn ngoài": 1200000,
+    "Khác": 1200000
 };
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxwgbYI51EUJDgjw8-f1oP6K7h_0zIHaPRPFmpV7GI6S88QrDO8rS25uasnSgoJOPPo/exec";
@@ -164,7 +164,7 @@ function renderData() {
         li.innerHTML = `
             <span>
                 <small class="date-label">[${displayDate}]</small> 
-                <b>${item.payer}</b>: ${item.description} 
+                <b>${item.payer} - ${item.category}</b>: ${item.description} 
                 </span>
             <span class="amt">${item.amount.toLocaleString('vi-VN')}đ</span>
         `;
